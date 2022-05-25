@@ -1,0 +1,55 @@
+*{
+  padding: 5px;
+  margin: 5px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  height: 70%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    border: 1px solid black;
+    box-shadow: 3px 3px 3px 3px black;
+    background-color: rgba(247, 240, 240, 0.842);
+}
+.right{
+  width: 50%;
+  height: 75%;
+  text-align: center;
+}
+.left{
+    width: 50%;
+    height: 50%;
+    text-align: center;
+}
+
+.left input{
+    text-align: center;
+}
+
+.table{
+  height: 75%;
+  overflow: hidden;
+  overflow-y: scroll;
+  border: 1px solid white;
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+#searchTable, th, td{
+  text-align: center;
+}
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+          <div class="left">
+            <h2>
+                Enter you data
+            </h2>
+            <form method="POST" id="formId" autocomplete="off">
+                <input type="text" name="fname" placeholder="Enter your Name" required>
+                <input type="text" name="lname" placeholder="Enter your Lastname" required>
+                <input type="email" name="email" placeholder="Enter your Email" required><br><br>
+                <input type="submit" value="submit">
+            </form>
+
+            <div class="leftPopUp">
+          
+            </div>
+        </div>
+
+        <div class="right">
+            <h2>Filterable Table</h2>
+          <p>Type something in the input field to search the table for first names, last names or emails:</p>  
+          <input id="myInput" type="text" placeholder="Search..">
+          <button id="resetInput" type="button">Reset</button>
+          <br><br>
+
+          <div class="table">
+          <table id="searchTable">
+            <thead>
+            <tr>
+              <th>S.No</th>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+            </tr>
+            </thead>
+            <tbody>
+              <% for(i=0; i< data.length; i++){ %>
+                <tr>
+                  <td><%- i + 1 %></td>
+                  <td><%- data[i].Firstname %></td>
+                  <td><%- data[i].Lastname %></td>
+                  <td><%- data[i].email %></td>
+                </tr>
+                <% } %>
+            </tbody>
+          </table>
+          </div>
+        </div>
+    </div>
+
+
+<script src="/js/home.js"></script>
+</body>
+</html>
